@@ -1,0 +1,96 @@
+/* Generale */
+body {
+    font-family: 'Georgia', serif; /* Font elegante */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f5f0; /* Sfondo tenue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centrare verticalmente */
+}
+
+/* Biglietto */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff; /* Colore del biglietto */
+    border: 2px solid #b07f7f; /* Bordo elegante */
+    border-radius: 15px; /* Angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effetto ombra */
+    padding: 30px;
+    text-align: center; /* Testo centrato */
+    color: #333; /* Testo leggibile */
+}
+
+/* Intestazione */
+header h1 {
+    font-size: 2.5rem;
+    color: #b07f7f; /* Colore coordinato con il bordo */
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #875e5e;
+}
+
+header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Dettagli dell'evento */
+.details {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fefefe; /* Sfondo per i dettagli */
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Bordo leggero */
+    color: #555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+.details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #875e5e;
+}
+
+/* Form RSVP */
+.rsvp {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f5f0; /* Colore leggermente diverso per separare */
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #b07f7f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #875e5e;
+}

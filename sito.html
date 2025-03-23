@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invito Matrimonio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Intestazione -->
+        <header>
+            <h1>Il nostro giorno speciale</h1>
+            <h2>Eleonora & Simone</h2>
+            <p>Contea <strong>7 settembre 2025</strong></p>
+        </header>
+
+        <!-- Dettagli -->
+        <section class="details">
+            <h3>Dettagli dell'evento</h3>
+            <p><strong>Luogo:</strong> Villa delle Rose, Torino</p>
+            <p><strong>Orario:</strong> Cerimonia alle 16:00, Cena alle 19:30</p>
+        </section>
+
+        <!-- RSVP Form -->
+        <section class="rsvp">
+            <h3>Conferma la tua partecipazione</h3>
+            <form id="rsvpForm">
+                <label for="name">Il tuo nome:</label>
+                <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" required>
+
+                <label for="email">La tua email:</label>
+                <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+
+                <label for="guests">Numero di partecipanti:</label>
+                <input type="number" id="guests" name="guests" min="1" max="5" required>
+
+                <button type="submit">Invia</button>
+            </form>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
