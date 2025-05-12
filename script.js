@@ -1,31 +1,25 @@
-document.getElementById("rsvpForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+window.addEventListener('DOMContentLoaded', () => {
+  // Rimuovi preloader dopo qualche secondo
+  const preloader = document.getElementById('preloader');
+  const container = document.querySelector('.container');
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+  setTimeout(() => {
+    preloader.style.display = 'none';
+    container.classList.remove('hidden');
+  }, 2500);
 
-    fetch("https://script.google.com/macros/s/AKfycbx-XAulWzrChBTs8DOJK_nmHtG4aYWAL_GsWS6rCduKrBHs_RVwefBTHIor62jrDm_z/exec", {
-        method: "POST",
-        body: JSON.stringify({ name, email }),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(res => res.json())
-    .then(data => {
-        // Mostra il messaggio di conferma
-        const confirmationMessage = document.createElement("p");
-        confirmationMessage.innerText = `Grazie ${name}! Abbiamo registrato la tua partecipazione. Ti aspettiamo al nostro matrimonio!`;
-        confirmationMessage.style.color = "#875e5e";
-
-        const form = document.getElementById("rsvpForm");
-        form.parentNode.appendChild(confirmationMessage);
-
-        // Nascondi il form per evitare invii multipli
-        form.style.display = "none";
-    })
-    .catch(err => {
-        alert("Errore durante l'invio. Contatta Elessimo.");
-        console.error(err);
+  // Animazione passi timeline
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
+  }, {
+    threshold: 0.3
+  });
+
+  document.querySelectorAll('.step').forEach(step => {
+    observer.observe(step);
+  });
 });
