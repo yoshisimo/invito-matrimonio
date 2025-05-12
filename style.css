@@ -1,96 +1,285 @@
-/* Generale */
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Georgia', serif; /* Font elegante */
-    margin: 0;
-    padding: 0;
-    background-color: #f8f5f0; /* Sfondo tenue */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Centrare verticalmente */
+  font-family: 'Georgia', serif;
+  background: url('sfondo-mappa.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #2c1e12;
+  padding: 20px;
 }
 
-/* Biglietto */
-.container {
-    width: 90%;
-    max-width: 600px;
-    background-color: #ffffff; /* Colore del biglietto */
-    border: 2px solid #b07f7f; /* Bordo elegante */
-    border-radius: 15px; /* Angoli arrotondati */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effetto ombra */
-    padding: 30px;
-    text-align: center; /* Testo centrato */
-    color: #333; /* Testo leggibile */
+/* Pre-caricamento */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a120b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-/* Intestazione */
-header h1 {
-    font-size: 2.5rem;
-    color: #b07f7f; /* Colore coordinato con il bordo */
-    margin: 0;
+#preloader img {
+  width: 300px;
+  max-width: 80%;
 }
 
-header h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    color: #875e5e;
+/* Nasconde il sito fino a fine caricamento */
+.hidden {
+  display: none;
 }
 
-header p {
-    font-size: 1rem;
-    color: #666;
+.container section {
+  margin-bottom: 40px;
+  background-color: rgba(248, 241, 224, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Dettagli dell'evento */
-.details {
-    margin: 20px 0;
-    padding: 15px;
-    background-color: #fefefe; /* Sfondo per i dettagli */
-    border-radius: 10px;
-    border: 1px solid #ddd; /* Bordo leggero */
-    color: #555;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+/* Hero */
+.hero {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.details h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #875e5e;
+.hero h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #452e1c;
 }
 
-/* Form RSVP */
-.rsvp {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f9f5f0; /* Colore leggermente diverso per separare */
-    border-radius: 10px;
-    border: 1px solid #ccc;
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 10px;
 }
 
-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
+/* Bottoni */
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #8b6f47;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-form input, form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+.button:hover {
+  background-color: #a1835a;
 }
 
-form button {
-    background-color: #b07f7f;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+/* Timeline */
+.timeline h2 {
+  margin-bottom: 20px;
 }
 
-form button:hover {
-    background-color: #875e5e;
+.step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.step img {
+  width: 24px;
+  height: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.step p {
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step.visible img,
+.step.visible p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Playlist */
+.playlist img.qr {
+  margin-top: 15px;
+  width: 160px;
+  height: auto;
+  border: 2px solid #c2b59b;
+  border-radius: 10px;
+}
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: url('sfondo-mappa.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #2c1e12;
+  padding: 20px;
+}
+
+/* Pre-caricamento */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a120b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#preloader img {
+  width: 300px;
+  max-width: 80%;
+}
+
+/* Nasconde il sito fino a fine caricamento */
+.hidden {
+  display: none;
+}
+
+.container section {
+  margin-bottom: 40px;
+  background-color: rgba(248, 241, 224, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #452e1c;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+/* Bottoni */
+/* Bottoni */
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #8b6f47;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.6) 10%, transparent 60%);
+  transition: all 0.6s ease-out;
+  transform: scale(0);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.button:hover::before {
+  transform: scale(1);
+  opacity: 0;
+}
+
+.button:hover {
+  background-color: #a1835a;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.1);
+}
+
+
+/* Timeline */
+.timeline h2 {
+  margin-bottom: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.step img {
+  width: 24px;
+  height: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.step p {
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step.visible img,
+.step.visible p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Playlist */
+.playlist img.qr {
+  margin-top: 15px;
+  width: 160px;
+  height: auto;
+  border: 2px solid #c2b59b;
+  border-radius: 10px;
 }
