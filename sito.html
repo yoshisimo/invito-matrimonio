@@ -1,44 +1,73 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invito Matrimonio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Nostro Giorno Magico</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <!-- Intestazione -->
-        <header>
-            <h1>Il nostro giorno speciale</h1>
-            <h2>Eleonora & Simone</h2>
-            <p>Contea <strong>7 settembre 2025</strong></p>
-        </header>
 
-        <!-- Dettagli -->
-        <section class="details">
-            <h3>Dettagli dell'evento</h3>
-            <p><strong>Luogo:</strong> Villa delle Rose, Torino</p>
-            <p><strong>Orario:</strong> Cerimonia alle 16:00, Cena alle 19:30</p>
-        </section>
+  <!-- Pre-caricamento -->
+  <div id="preloader">
+    <img src="giuro-solennemente.png" alt="Giuro solennemente di non avere buone intenzioni" />
+  </div>
 
-        <!-- RSVP Form -->
-        <section class="rsvp">
-            <h3>Conferma la tua partecipazione</h3>
-            <form id="rsvpForm">
-                <label for="name">Il tuo nome:</label>
-                <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" required>
+  <div class="container hidden">
 
-                <label for="email">La tua email:</label>
-                <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Mappa del Matrimonio</h1>
+      <p>Eleonora & Simone</p>
+    </section>
 
-                <label for="guests">Numero di partecipanti:</label>
-                <input type="number" id="guests" name="guests" min="1" max="5" required>
+<!-- RSVP -->
+<section class="rsvp">
+  <h2>RSVP</h2>
+  <p>Clicca qui per confermare la tua presenza:</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfac9i7USWkBrxJ-XZHabPmBFfZQ3Q9yYdCBBTXroH0QWvBiw/viewform?usp=header" target="_blank" class="button">Apri il modulo</a>
+</section>
 
-                <button type="submit">Invia</button>
-            </form>
-        </section>
-    </div>
-    <script src="script.js"></script>
+    <!-- Location -->
+<section class="location">
+  <h2>Location</h2>
+  <p>Villa delle Rose, Torino</p>
+  <a href="https://maps.app.goo.gl/3P63irmcD3TXxCWX8" target="_blank" class="button">Apri in Google Maps</a>
+</section>
+
+
+    <!-- Timeline -->
+    <section class="timeline">
+      <h2>Timeline dell’evento</h2>
+
+      <div class="step">
+        <img src="impronta.png" alt="passo" />
+        <p>Accoglienza</p>
+      </div>
+      <div class="step">
+        <img src="impronta.png" alt="passo" />
+        <p>Rito</p>
+      </div>
+      <div class="step">
+        <img src="impronta.png" alt="passo" />
+        <p>Aperitivo</p>
+      </div>
+      <div class="step">
+        <img src="impronta.png" alt="passo" />
+        <p>Cena</p>
+      </div>
+    </section>
+
+    <!-- Playlist Spotify -->
+    <section class="playlist">
+      <h2>Playlist degli invitati</h2>
+      <p>Scansiona il QR code per ascoltare e aggiungere le tue canzoni!</p>
+      <img src="qr-code.png" alt="QR playlist Spotify" class="qr" />
+      <a href="https://spotify.com/link-provisorio" target="_blank" class="button">Apri la playlist</a>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
